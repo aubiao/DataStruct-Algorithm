@@ -1,2 +1,2 @@
-# DataStruct
-常见数据结构的Go实现
+# DataStruct&Algorithm
+常见数据结构及算法的Go实现
