@@ -1,15 +1,19 @@
-package BubbleSort
+package main
 
 import "fmt"
 
 func main() {
-	ar := [10]int{9, 8, 6, 4, 2, 7, 1, 3, 0, 5}
-	num := len(ar)
+	var num int
+	fmt.Scanf("%d\n", &num)
+	arr := make([]int, 10, 1000)
 	for i := 0; i < num; i++ {
+		fmt.Scanf("%d", &arr[i])
+	}
+	for i := 0; i < num-1; i++ {
 		flag := false
-		for j := i + 1; j < num; j++ {
-			if ar[i] < ar[j] {
-				ar[i], ar[j] = ar[j], ar[i]
+		for j := num - 1; j > i; j-- {
+			if arr[j] < arr[j-1] {
+				arr[j], arr[j-1] = arr[j-1], arr[j]
 				flag = true
 			}
 		}
@@ -17,5 +21,5 @@ func main() {
 			break
 		}
 	}
-	fmt.Println(ar)
+	fmt.Println(arr)
 }
