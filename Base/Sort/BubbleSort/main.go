@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var num int
 	fmt.Scanf("%d\n", &num)
-	arr := make([]int, 10, 1000)
+	arr := make([]int, num)
 	for i := 0; i < num; i++ {
 		fmt.Scanf("%d", &arr[i])
 	}
